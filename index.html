@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Harry Potter</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('nav a, #mobile-menu a');
+            
+            const currentPath = window.location.pathname;
+            links.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+            link.classList.add('block', 'text-[#495464]', 'font-bold','content-none','underline', 'h-2'); 
+        }
+            });
+
+            const hamburger = document.getElementById('hamburger');
+            const closeMenu = document.getElementById('close-menu');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            hamburger.addEventListener('click', () => {
+                mobileMenu.classList.remove('-translate-x-full'); 
+                hamburger.classList.add('hidden'); 
+                closeMenu.classList.remove('hidden'); 
+            });
+
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('-translate-x-full'); 
+                closeMenu.classList.add('hidden'); 
+                hamburger.classList.remove('hidden'); 
+            });
+        });
+    </script>
+</head>
+<body class="bg-white font-[Poppins]">
+    <main>
+        <nav class="flex items-center justify-between bg-primary p-5 bg-gray-100 drop-shadow-2xl relative">
+            <div class="flex items-center">
+                <h1 class="font-bold text-2xl tracking-widest">Harry Potter</h1>
+            </div>
+            <ul class="hidden md:flex space-x-4">
+                <li><a href="/" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Home</a></li>
+                <li><a href="/characterprofile.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Character Profiles</a></li>
+                <li><a href="/plotsummary.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Plot Summary</a></li>
+                <li><a href="/theme.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Theme and Message</a></li>
+                <li><a href="/gallery.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Gallery</a></li>
+            </ul>
+
+            <div class="md:hidden flex items-center space-x-2">
+                <button id="hamburger" class="focus:outline-none">
+                    <img src="./images/menu.png" alt="Menu" class="w-6 h-6">
+                </button>
+                
+                <button id="close-menu" class="focus:outline-none hidden">
+                    <img src="./images/close.png" alt="Close" class="w-6 h-6">
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="fixed inset-y-0 left-0 bg-gray-100 w-64 transform -translate-x-full transition-transform duration-300 ease-in-out z-50 drop-shadow-2xl">
+            <div class="flex items-center justify-between p-5">
+                <h2 class="font-bold text-2xl tracking-widest">Harry Potter</h2>
+            </div>
+            <ul class="space-y-4 p-5">
+                <li><a href="/" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Home</a></li>
+                <li><a href="/characterprofile.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Character Profiles</a></li>
+                <li><a href="/plotsummary.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Plot Summary</a></li>
+                <li><a href="/theme.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Theme and Message</a></li>
+                <li><a href="/gallery.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Gallery</a></li>
+            </ul>
+        </div>
+        <section class="pt-4 flex justify-center items-center">
+            <div class="border bg-white drop-shadow-2xl h-[600px] md:h-96 ml-5 mr-4 rounded-md p-6 w-full max-w-2xl">
+                <label class="text-2xl font-bold text-gray-800 mb-4 text-center">Introduction</label>
+                <p class="text-md text-gray-600 leading-relaxed text-center">
+                    The Harry Potter series, written by J.K. Rowling, introduces readers to a magical world where a young boy, Harry Potter, discovers on his eleventh birthday that he is a wizard. Raised by his cruel aunt and uncle, Harry learns that he is famous in the magical world for surviving an attack by the dark wizard Lord Voldemort, who killed his parents. As Harry attends Hogwarts School of Witchcraft and Wizardry, he makes close friends like Ron Weasley and Hermione Granger, and learns about the complexities of the wizarding world, its dangers, and his own mysterious past. The series explores themes of friendship, bravery, good versus evil, and the power of love. Harry’s journey involves facing increasingly difficult challenges as he uncovers dark secrets about Voldemort and his own destiny.
+                </p>
+            </div>
+        </section>
+
+		<section class="pt-8 flex justify-center items-center">
+            <div class="border bg-white drop-shadow-2xl h-auto p-6 w-full max-w-2xl rounded-md">
+                <label class="text-2xl font-bold text-gray-800 mb-5 text-center">Significance in the Story</label>
+                <p class="text-md text-gray-600 leading-relaxed text-center">
+                    The Harry Potter series is much more than a tale about magic and fantasy. It delves deeply into themes such as the power of love, the fight against evil, and the value of friendship. These universal themes have resonated with readers of all ages, making it a global phenomenon. 
+                    
+                    At its core, Harry's journey reflects the battle between good and evil, with Lord Voldemort representing the ultimate evil force, and Harry representing hope, resilience, and the ability to overcome adversity. The series emphasizes the importance of making choices, even in the face of fear, and how courage and sacrifice are often necessary to achieve a greater good.
+                    
+                    The story also highlights the significance of identity and belonging. Harry’s discovery of his true identity and his place in the wizarding world mirrors the real-life struggles of self-discovery and finding a sense of belonging, making it relatable to a wide audience. It shows that, no matter how difficult or painful life may be, there is always the potential for personal growth, healing, and hope.
+                    
+                    Furthermore, Harry Potter* has had a profound impact on popular culture. It has inspired numerous adaptations, including movies, plays, and theme parks, while also fostering a community of fans and readers worldwide who celebrate the magic and lessons contained within the books.
+                </p>
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>
