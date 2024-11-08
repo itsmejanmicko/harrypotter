@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Harry Potter</title>
+    <title>Harry Potter | Profile</title>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const links = document.querySelectorAll('nav a, #mobile-menu a');
@@ -14,7 +14,7 @@
             const currentPath = window.location.pathname;
             links.forEach(link => {
                 if (link.getAttribute('href') === currentPath) {
-            link.classList.add('block', 'text-[#495464]', 'font-bold','content-none','underline', 'h-2'); 
+                    link.classList.add('block', 'text-[#F59E0B]', 'font-bold','content-none', 'h-2');
         }
             });
 
@@ -75,6 +75,10 @@
 		<section>
 			
 		</section>
+          
+        <footer class="mt-4 h-12 border-none border-gray-300 flex items-center justify-center bg-gray-100 text-gray-700 text-sm">
+            © 2024 Harry All rights reserved.
+        </footer>
     </main>
 </body>
 </html>

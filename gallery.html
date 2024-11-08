@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Harry Potter</title>
+    <title>Harry Potter | Gallery</title>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const links = document.querySelectorAll('nav a, #mobile-menu a');
@@ -14,7 +14,7 @@
             const currentPath = window.location.pathname;
             links.forEach(link => {
                 if (link.getAttribute('href') === currentPath) {
-            link.classList.add('block', 'text-[#495464]', 'font-bold','content-none','underline', 'h-2'); 
+					link.classList.add('block', 'text-[#F59E0B]', 'font-bold','content-none', 'h-2');
         }
             });
 
@@ -65,7 +65,7 @@
                 <h2 class="font-bold text-2xl tracking-widest">Harry Potter</h2>
             </div>
             <ul class="space-y-4 p-5">
-                <li><a href="#" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Home</a></li>
+                <li><a href="/" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Home</a></li>
                 <li><a href="characterprofile.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Character Profiles</a></li>
                 <li><a href="/plotsummary.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Plot Summary</a></li>
                 <li><a href="/theme.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Theme and Message</a></li>
@@ -73,118 +73,69 @@
             </ul>
         </div>
 		<section>
-					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-						<div class="relative group">
-							<img src="images/img1.jpg" alt="Image 1" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="images/img2.webp" alt="Image 2" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="images/img3.webp" alt="Image 3" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="images/img4.avif" alt="Image 4" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="images/img5.jfif" alt="Image 5" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="images/img6.jfif" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="images/img7.jpg" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="images/img8.webp" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="images/img8.webp" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="/images/character/harry.avif" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="/images/character/hagrid.avif" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="/images/character/hermione.webp" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="/images/character/draco.jpg" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="/images/character/ron.webp" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="/images/character/hagrid.avif" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="/images/character/sirius.webp" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="/images/character/luna" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
-						<div class="relative group">
-							<img src="/images/character/lord" alt="Image 6" class="w-full h-auto rounded-lg">
-							<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
-								<p class="text-white text-lg font-bold"></p>
-							</div>
-						</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 p-4">
+				<div class="relative group flex items-center justify-center overflow-hidden rounded-lg shadow-lg">
+					<img src="images/gallery/DnkyLl0P.jpg" alt="Image 1" class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+					<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
+						<p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+							Draco Malfoy is a pale, blond Slytherin with sharp features and icy gray eyes. Arrogant and prideful of his pure-blood heritage, he often antagonizes Harry Potter. Over time, Draco reveals a more conflicted side, struggling with his family’s dark expectations and his own inner turmoil.
+						</p>
 					</div>
-					
+				</div>
+		
+				<div class="relative group flex items-center justify-center overflow-hidden rounded-lg shadow-lg">
+					<img src="images/gallery/harry.jpg" alt="Image 2" class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+					<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
+						<p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+							Harry Potter is a brave and kind-hearted young wizard known for his lightning-shaped scar and loyalty to friends. Despite his fame as the "Boy Who Lived," he remains modest, determined, and deeply committed to protecting those he loves.
+						</p>
+					</div>
+				</div>
+		
+				<div class="relative group flex items-center justify-center overflow-hidden rounded-lg shadow-lg">
+					<img src="images/gallery/herm.jpg" alt="Image 3" class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+					<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
+						<p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+							Hermione Granger is an intelligent, resourceful, and fiercely loyal young witch. Known for her bushy brown hair and love of books, she’s highly skilled in magic and always eager to learn. Her quick thinking and determination make her a valuable friend, especially to Harry and Ron, as she consistently stands by them in their battles against dark forces.
+						</p>
+					</div>
+				</div>
+				<div class="relative group flex items-center justify-center overflow-hidden rounded-lg shadow-lg">
+					<img src="images/gallery/ron.jpg" alt="Image 3" class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+					<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
+						<p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+							Ron Weasley is a loyal and good-hearted wizard with a great sense of humor. Known for his red hair and large family, Ron can be a bit insecure but is fiercely brave when it matters most. As Harry's best friend, he’s always ready to support him, bringing courage, loyalty, and a touch of humor to their adventures.
+						</p>
+					</div>
+				</div>
+
+				<div class="relative group flex items-center justify-center overflow-hidden rounded-lg shadow-lg">
+					<img src="images/gallery/lord.jpg" alt="Image 3" class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+					<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
+						<p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+							Lord Voldemort, born Tom Riddle, is a powerful, ruthless dark wizard obsessed with immortality and pure-blood supremacy. With pale skin, red eyes, and a serpent-like face, he instills fear across the magical world. Cunning and highly skilled in dark magic, Voldemort will stop at nothing to achieve ultimate power, viewing love and compassion as weaknesses. His relentless pursuit of domination makes him Harry Potter’s most dangerous adversary.
+						</p>
+					</div>
+				</div>
+				
+				<div class="relative group flex items-center justify-center overflow-hidden rounded-lg shadow-lg">
+					<img src="images/gallery/dnd.jpg" alt="Image 3" class="w-full h-auto object-cover transition-transform duration-300 transform group-hover:scale-105">
+					<div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 flex items-center justify-center transition duration-300">
+						<p class="text-white text-lg font-bold opacity-0 group-hover:opacity-100 transition duration-300 p-4">
+							Severus Snape is a complex, enigmatic wizard with a cold, sarcastic demeanor and a talent for potions and dark arts. With his greasy black hair, pale skin, and piercing gaze, he’s often misunderstood and feared by students. Though initially seeming antagonistic, Snape is deeply loyal, harboring hidden courage and an enduring love that shapes his actions. His mysterious motives make him one of the most intriguing figures in the magical world.
+						</p>
+					</div>
+				</div>
+
+			</div>
+
 		</section>
+		
+  
+        <footer class="mt-4 h-12 border-none border-gray-300 flex items-center justify-center bg-gray-100 text-gray-700 text-sm">
+            © 2024 Harry All rights reserved.
+        </footer>
+		
     </main>
 </body>
 </html>

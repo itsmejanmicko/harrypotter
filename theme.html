@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Harry Potter</title>
+    <title>Harry Potter | Theme</title>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const links = document.querySelectorAll('nav a, #mobile-menu a');
@@ -14,7 +14,7 @@
             const currentPath = window.location.pathname;
             links.forEach(link => {
                 if (link.getAttribute('href') === currentPath) {
-            link.classList.add('block', 'text-[#495464]', 'font-bold','content-none','underline', 'h-2'); 
+                    link.classList.add('block', 'text-[#F59E0B]', 'font-bold','content-none', 'h-2');
         }
             });
 
@@ -72,16 +72,35 @@
                 <li><a href="/gallery.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Gallery</a></li>
             </ul>
         </div>
-		<section>
-			<div>
-				<label>Introduction</label>
-			</div>
-		</section>
-		<section>
-			<div>
-				<label>Significance</label>
-			</div>
-		</section>
+        <section id="introduction-section" class="pt-12 pb-16 flex justify-center items-center bg-gray-50">
+            <div class="md:flex flex-col-reverse items-center justify-between border bg-white drop-shadow-xl h-auto ml-5 mr-4 rounded-md p-8 w-full max-w-[1000px] transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-xl font-extrabold text-gray-800 mb-6 text-center hover:text-indigo-600 transition duration-300">The Harry Potter series explores a multitude of themes, but some of the most prominent and impactful ones are:</h2>
+                    <p class="text-md text-gray-600 leading-relaxed text-justify mb-4 hover:text-gray-800 transition duration-300">
+                        - Good vs. Evil: This classic theme is central to the series, with Harry representing the forces of good and Voldemort embodying pure evil. The series explores the complexities of both sides, showcasing the courage and resilience of those who fight for good, and the seductive power and ultimate destructiveness of evil.
+                    </p>
+                    <p class="text-md text-gray-600 leading-relaxed text-justify hover:text-gray-800 transition duration-300 mb-4">
+                        - Love & Friendship:  Love, in its various forms, is a powerful force that conquers fear and darkness. This is exemplified by Harry's parents' love protecting him from Voldemort, and the love he shares with his friends, Ron and Hermione, fueling his strength and determination.
+                    </p>
+                    <p class="text-md text-gray-600 leading-relaxed text-justify hover:text-gray-800 transition duration-300 mb-3">
+                        - Courage & Determination: Harry and his friends constantly face danger and adversity, but they never give up hope. Their resilience in the face of fear and their unwavering belief in what is right inspire readers to face their own challenges with courage and determination.
+                    </p>
+                    <p class="text-md text-gray-600 leading-relaxed text-justify hover:text-gray-800 transition duration-300 mb-3">
+                        - The Importance of Family: Family, both chosen and biological, is a powerful source of support and strength. Harry finds solace and strength in his friends and mentors, and the series explores the complexities of family relationships, including the loss of loved ones and the importance of forgiveness.
+                    </p>
+                    <p class="text-md text-gray-600 leading-relaxed text-justify hover:text-gray-800 transition duration-300 mb-3">
+                        - The Power of Choice:  The series emphasizes that everyone has the power to choose their own path, even in the face of overwhelming circumstances. Harry's choices define his character and ultimately lead him to confront his destiny.
+                    </p>
+                    <p class="text-md text-gray-600 leading-relaxed text-justify hover:text-gray-800 transition duration-300 mb-3">
+                        The overall message of Harry Potter can be summarized as a celebration of hope, courage, and the enduring power of love and friendship in the face of adversity. It's a reminder that even in the darkest of times, the light of good can prevail.
+                    </p>
+                </div>
+            </div>
+        </section>
+          
+        <footer class="mt-4 h-12 border-none border-gray-300 flex items-center justify-center bg-gray-100 text-gray-700 text-sm">
+            © 2024 Harry All rights reserved.
+        </footer>
     </main>
 </body>
 </html>

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Harry Potter</title>
+    <title>Harry Potter | Home</title>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const links = document.querySelectorAll('nav a, #mobile-menu a');
@@ -14,7 +14,7 @@
             const currentPath = window.location.pathname;
             links.forEach(link => {
                 if (link.getAttribute('href') === currentPath) {
-            link.classList.add('block', 'text-[#495464]', 'font-bold','content-none','underline', 'h-2'); 
+            link.classList.add('block', 'text-[#F59E0B]', 'font-bold','content-none', 'h-2'); 
         }
             });
 
@@ -34,6 +34,10 @@
                 hamburger.classList.remove('hidden'); 
             });
         });
+    
+            function scrollToContent() {
+                document.querySelector("#introduction-section").scrollIntoView({ behavior: "smooth" });
+            }
     </script>
 </head>
 <body class="bg-white font-[Poppins]">
@@ -72,30 +76,62 @@
                 <li><a href="/gallery.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Gallery</a></li>
             </ul>
         </div>
-        <section class="pt-4 flex justify-center items-center">
-            <div class="border bg-white drop-shadow-2xl h-[600px] md:h-96 ml-5 mr-4 rounded-md p-6 w-full max-w-2xl">
-                <label class="text-2xl font-bold text-gray-800 mb-4 text-center">Introduction</label>
-                <p class="text-md text-gray-600 leading-relaxed text-center">
-                    The Harry Potter series, written by J.K. Rowling, introduces readers to a magical world where a young boy, Harry Potter, discovers on his eleventh birthday that he is a wizard. Raised by his cruel aunt and uncle, Harry learns that he is famous in the magical world for surviving an attack by the dark wizard Lord Voldemort, who killed his parents. As Harry attends Hogwarts School of Witchcraft and Wizardry, he makes close friends like Ron Weasley and Hermione Granger, and learns about the complexities of the wizarding world, its dangers, and his own mysterious past. The series explores themes of friendship, bravery, good versus evil, and the power of love. Harry’s journey involves facing increasingly difficult challenges as he uncovers dark secrets about Voldemort and his own destiny.
+        
+        <section class="relative bg-cover bg-center h-[500px] flex items-center justify-center" style="background-image: url('images/poster.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative z-10 text-center text-white px-6">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-wider mb-4">Harry Potter</h1>
+                <p class="text-lg md:text-xl max-w-md mx-auto mb-6">
+                    A Journey into Magic and Friendship
                 </p>
+                <button onclick="scrollToContent()" class="bg-yellow-500 text-black font-semibold py-2 px-6 rounded-full hover:bg-yellow-600 transition duration-300 ease-in-out">
+                    Begin Journey
+                </button>
             </div>
         </section>
-
-		<section class="pt-8 flex justify-center items-center">
-            <div class="border bg-white drop-shadow-2xl h-auto p-6 w-full max-w-2xl rounded-md">
-                <label class="text-2xl font-bold text-gray-800 mb-5 text-center">Significance in the Story</label>
-                <p class="text-md text-gray-600 leading-relaxed text-center">
-                    The Harry Potter series is much more than a tale about magic and fantasy. It delves deeply into themes such as the power of love, the fight against evil, and the value of friendship. These universal themes have resonated with readers of all ages, making it a global phenomenon. 
-                    
+        
+        <section id="introduction-section" class="pt-12 flex justify-center items-center">
+            <div class="md:flex flex-col-reverse items-center justify-between border bg-white drop-shadow-2xl h-auto ml-5 mr-4 rounded-md p-8 w-full max-w-[1000px] transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-3xl font-extrabold text-gray-800 mb-6 text-center hover:text-indigo-600 transition duration-300">Introduction</h2>
+                    <div class="flex items-center justify-center mb-4">
+                        <img src="images/introduction.jpg" class="h-64 rounded-3xl transition-transform duration-300 ease-in-out hover:scale-110 hover:brightness-110">
+                    </div>
+                    <p class="text-md text-gray-600 leading-relaxed text-justify mb-4 hover:text-gray-800 transition duration-300">
+                        The <span class="text-indigo-600 font-semibold">Harry Potter</span> series, written by J.K. Rowling, introduces readers to a magical world where a young boy, Harry Potter, discovers on his eleventh birthday that he is a wizard. Raised by his cruel aunt and uncle, Harry learns that he is famous in the magical world for surviving an attack by the dark wizard Lord Voldemort, who killed his parents.
+                    </p>
+                    <p class="text-md text-gray-600 leading-relaxed text-justify hover:text-gray-800 transition duration-300">
+                        As Harry attends Hogwarts School of Witchcraft and Wizardry, he makes close friends like Ron Weasley and Hermione Granger, and learns about the complexities of the wizarding world, its dangers, and his own mysterious past. The series explores themes of <span class="text-yellow-500 font-semibold">friendship</span>, <span class="text-red-500 font-semibold">bravery</span>, good versus evil, and the power of love. Harry’s journey involves facing increasingly difficult challenges as he uncovers dark secrets about Voldemort and his own destiny.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="pt-8 flex justify-center items-center">
+            <div class="border bg-white drop-shadow-2xl h-auto p-8 w-full max-w-[1000px] rounded-md transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                <h2 class="text-3xl font-extrabold text-gray-800 mb-6 text-center hover:text-indigo-600 transition duration-300">Significance in the Story</h2>
+                <div class="flex items-center justify-center mb-4">
+                    <img src="images/significance.webp" class="h-64 rounded-3xl transition-transform duration-300 ease-in-out hover:scale-110 hover:brightness-110">
+                </div>
+                <p class="text-md text-gray-600 leading-relaxed text-justify hover:text-gray-800 transition duration-300">
+                    The Harry Potter series is much more than a tale about magic and fantasy. It delves deeply into themes such as the power of love, the fight against evil, and the value of friendship. These universal themes have resonated with readers of all ages, making it a global phenomenon.
+                </p>
+                <p class="text-md text-gray-600 leading-relaxed mt-4 text-justify hover:text-gray-800 transition duration-300">
                     At its core, Harry's journey reflects the battle between good and evil, with Lord Voldemort representing the ultimate evil force, and Harry representing hope, resilience, and the ability to overcome adversity. The series emphasizes the importance of making choices, even in the face of fear, and how courage and sacrifice are often necessary to achieve a greater good.
-                    
-                    The story also highlights the significance of identity and belonging. Harry’s discovery of his true identity and his place in the wizarding world mirrors the real-life struggles of self-discovery and finding a sense of belonging, making it relatable to a wide audience. It shows that, no matter how difficult or painful life may be, there is always the potential for personal growth, healing, and hope.
-                    
-                    Furthermore, Harry Potter* has had a profound impact on popular culture. It has inspired numerous adaptations, including movies, plays, and theme parks, while also fostering a community of fans and readers worldwide who celebrate the magic and lessons contained within the books.
                 </p>
             </div>
         </section>
         
+        <footer class="mt-4 h-12 border-none border-gray-300 flex items-center justify-center bg-gray-100 text-gray-700 text-sm">
+            © 2024 Harry All rights reserved.
+        </footer>
+        
+<script>
+    function scrollToContent() {
+        document.querySelector("#introduction-section").scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+
     </main>
 </body>
 </html>

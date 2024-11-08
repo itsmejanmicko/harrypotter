@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <title>Harry Potter</title>
+    <title>Harry Potter | Plot</title>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const links = document.querySelectorAll('nav a, #mobile-menu a');
@@ -14,8 +14,8 @@
             const currentPath = window.location.pathname;
             links.forEach(link => {
                 if (link.getAttribute('href') === currentPath) {
-            link.classList.add('block', 'text-[#495464]', 'font-bold','content-none','underline', 'h-2'); 
-        }
+                    link.classList.add('block', 'text-[#F59E0B]', 'font-bold','content-none', 'h-2');
+                }
             });
 
             const hamburger = document.getElementById('hamburger');
@@ -34,10 +34,14 @@
                 hamburger.classList.remove('hidden'); 
             });
         });
+        function scrollToContent() {
+            document.querySelector("#introduction-section").scrollIntoView({ behavior: "smooth" });
+        }
     </script>
 </head>
 <body class="bg-white font-[Poppins]">
     <main>
+        <!-- Navigation Bar -->
         <nav class="flex items-center justify-between bg-primary p-5 bg-gray-100 drop-shadow-2xl relative">
             <div class="flex items-center">
                 <h1 class="font-bold text-2xl tracking-widest">Harry Potter</h1>
@@ -60,6 +64,8 @@
                 </button>
             </div>
         </nav>
+
+        <!-- Mobile Menu -->
         <div id="mobile-menu" class="fixed inset-y-0 left-0 bg-gray-100 w-64 transform -translate-x-full transition-transform duration-300 ease-in-out z-50 drop-shadow-2xl">
             <div class="flex items-center justify-between p-5">
                 <h2 class="font-bold text-2xl tracking-widest">Harry Potter</h2>
@@ -72,9 +78,38 @@
                 <li><a href="/gallery.html" class="text-primary-foreground hover:text-[#495464] underline-hover transition duration-300 ease-in-out">Gallery</a></li>
             </ul>
         </div>
-        <section>
-            
+
+        <!-- Hero Section -->
+        <section class="relative bg-cover bg-center h-[700px] flex items-center justify-center" style="background-image: url('images/poster1.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative z-10 text-center text-white px-6">
+                <h1 class="text-4xl md:text-6xl font-bold tracking-wider mb-4">Plot Summary</h1>
+                <p class="text-lg md:text-xl max-w-md mx-auto mb-6">A Journey into Magic and Friendship</p>
+                <button onclick="scrollToContent()" class="bg-yellow-500 text-black font-semibold py-2 px-6 rounded-full hover:bg-yellow-600 transition duration-300 ease-in-out">Begin Journey</button>
+            </div>
         </section>
+
+        <!-- Plot Summary Section -->
+        <section id="introduction-section" class="pt-12 pb-16 flex justify-center items-center bg-gray-50">
+            <div class="md:flex flex-col-reverse items-center justify-between border bg-white drop-shadow-xl h-auto ml-5 mr-4 rounded-md p-8 w-full max-w-[1000px] transition-transform transform hover:scale-105 duration-300 ease-in-out">
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-3xl font-extrabold text-gray-800 mb-6 text-center hover:text-indigo-600 transition duration-300">Plot Overview</h2>
+                    <p class="text-md text-gray-600 leading-relaxed text-justify mb-4 hover:text-gray-800 transition duration-300">
+                        Harry Potter is an orphan who discovers on his eleventh birthday that he is a wizard and has been accepted into Hogwarts School of Witchcraft and Wizardry. He learns about his parents' tragic death at the hands of the dark wizard Lord Voldemort, who also tried to kill him as a baby.
+                    </p>
+                    <p class="text-md text-gray-600 leading-relaxed text-justify hover:text-gray-800 transition duration-300 mb-4">
+                        At Hogwarts, Harry finds friends in Ron Weasley and Hermione Granger. Together they face challenges and dangers, including encountering Voldemort's followers, the Death Eaters. Throughout the series, Harry learns about his own magical abilities and destiny as the "Boy Who Lived."
+                    </p>
+                    <p class="text-md text-gray-600 leading-relaxed text-justify hover:text-gray-800 transition duration-300 mb-3">
+                        He eventually confronts Voldemort in a climactic battle, defeating him and restoring peace to the wizarding world. The series explores themes of friendship, courage, love, and the power of good over evil.
+                    </p>
+                </div>
+            </div>
+        </section>
+          
+        <footer class="mt-4 h-12 border-none border-gray-300 flex items-center justify-center bg-gray-100 text-gray-700 text-sm">
+            © 2024 Harry All rights reserved.
+        </footer>
     </main>
 </body>
 </html>
